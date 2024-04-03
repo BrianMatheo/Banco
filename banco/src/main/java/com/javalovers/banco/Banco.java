@@ -1,8 +1,10 @@
 package com.javalovers.banco;
 import java.util.Scanner;
 import parameters.Title;
+import java.util.ArrayList;
 public class Banco {
     public static void main(String[] args) {
+        ArrayList<Title> innovador = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
         System.out.println("say your name");
         String author = scanner.next();
@@ -59,11 +61,11 @@ public class Banco {
                 staytwo="inside";
             }else{
                 staytwo="outside";
-                Title.modifyMoney(money, ingress);
                     }
         }
-        Title person1 = new Title(author,money,ingress);
-        System.out.println(person1.toString());
+        Title person1 = new Title(author, money,ingress);
+        person1.modifyMoney(ingress);
+        System.out.println(person1);
         System.out.println("see ya!");
     }
 }

@@ -10,13 +10,13 @@ public class Title {
         this.ingress = ingress;
     }
     
-    public static void modifyMoney(double money, double ingress){
-    money=money-ingress;
-                if(money<=0){
+    public void modifyMoney(double ingress){
+    this.money = this.money-ingress;
+                if(this.money<=0){
                     System.out.println("withdrawals>money in account, so your account now is 0");
-                    money = 0;
+                    this.money = 0;
                 }else{
-        System.out.println("your money is " + money);
+        System.out.println("your money is " + this.money);
                 }
 }
     
